@@ -1,7 +1,7 @@
 /**
  * Imports the necessary modules.
  */
-const User = require('./models/User');
+const User = require('../users');
 const { generateOTP, sendOTPByEmail } = require('./utils');
 
 /**
