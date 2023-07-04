@@ -2,7 +2,11 @@ const express = require('express');
 const router = express.Router();
 const User = require('../users');
 
-// Handle the GET request to verify an OTP
+/*** Handles the GET request to verify an OTP to complete registration.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @returns {void}
+ */
 router.get('/', async (req, res) => {
   const { otp } = req.query;
 
