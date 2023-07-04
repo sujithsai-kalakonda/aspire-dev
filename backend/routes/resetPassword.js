@@ -2,7 +2,12 @@ const express = require('express');
 const router = express.Router();
 const User = require('../users');
 
-// Handle the PUT request to reset the user's password
+
+/*** Handles the PUT request to reset the user's password.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @returns {void}
+ */
 router.put('/', async (req, res) => {
   const { password } = req.body;
 
