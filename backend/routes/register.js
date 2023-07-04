@@ -3,7 +3,11 @@ const router = express.Router();
 const User = require('../users');
 const { generateOTP, sendOTPByEmail } = require('../utils');
 
-// Handle the POST request to register a new user
+/*** Handles the POST request to register a new user.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @returns {void}
+ */
 router.post('/', async (req, res) => {
 	const { username, password, confirmPassword, email, collegename, firstname, lastname } = req.body;
 
