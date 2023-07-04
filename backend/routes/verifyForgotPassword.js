@@ -3,7 +3,12 @@ const router = express.Router();
 const User = require('../users');
 const { generateOTP, sendOTPByEmail } = require('../utils');
 
-// Handle the POST request to verify the OTP for forgot password
+
+/*** Handles the POST request to verify the OTP for forgot password.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @returns {void}
+ */
 router.post('/verifyforgotpassword', async (req, res) => {
   const { usernameOrEmail, otp } = req.body;
 
