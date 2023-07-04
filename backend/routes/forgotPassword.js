@@ -3,7 +3,12 @@ const router = express.Router();
 const User = require('../users');
 const { generateOTP, sendOTPByEmail } = require('../utils');
 
-// Handle the POST request for forgot password
+/*** Handles the POST request for forgot password.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @param {Function} next - The function to call next middleware.
+ * @returns {void}
+ */
 router.post('/', async (req, res) => {
   const { username, email } = req.body;
 
